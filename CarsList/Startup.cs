@@ -25,6 +25,7 @@ namespace Cars
 
     public void Configure(IApplicationBuilder app)
     {
+
       app.UseDeveloperExceptionPage();
 
       app.UseMvc(routes =>
@@ -34,6 +35,8 @@ namespace Cars
           template: "{controller=Home}/{action=Index}/{id?}");
       });
 
+        app.UseStaticFiles();
+        
         app.Run(async (context) =>
         {
           await context.Response.WriteAsync("Something went wrong!");
