@@ -47,5 +47,9 @@ namespace CarsList.Models
       return _items;
     }
 
+    public void AddItem(Item item)
+    {
+      _items.Add(item);
+    }
   }
 }
